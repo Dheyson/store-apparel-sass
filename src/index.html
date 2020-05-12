@@ -14,30 +14,34 @@
 	<link rel="stylesheet" href="../build/stylesheets/app.css" type="text/css">
 </head>
 
-<body>
-	<div class="container">
-		<div class="container__main">
-			<div class="flex flex-column flex-evenly align-center">
+<body class="container">
+		<div class="main">
+			<div class="flex flex-column flex-around margin-auto">
 				<header>
 					<img src="./assets/images/logo.svg" alt="Logotype page" />
 				</header>
-				<h1>
-					We're
-				</h1>
-				<h2>
-					coming soon
-				</h2>
-				<p>
-					Hello fellow shoppers! We're currently building our new fashion store.
-					Add your email below to stay up-to-date with announcements and our launch deals.
-				</p>
+				<div class="information">
+					<h1 id="title">
+						We're
+					</h1>
+					<h2 class="sub-title">
+						coming <br/>
+						soon
+					</h2>
+					<p>
+						Hello fellow shoppers! We're currently building our new fashion store.
+						Add your email below to stay up-to-date with announcements and our launch deals.
+					</p>
+				</div>
 				<div>
 					<label for="">Email Address</label>
 					<input type="text">
 				</div>
 			</div>
+
 			<img src="./assets/images/hero-desktop.jpg" alt="Home portrait" srcset="./assets/images/hero-mobile.jpg 375w,
-			./assets/images/hero-desktop.jpg 1440w" sizes="(max-width: 375px) 335px, 1440px">
+			./assets/images/hero-desktop.jpg 1440w" sizes="(max-width: 375px) 335px, 1440px" />
+
 		</div>
 		<footer>
 			<p class="footer">
@@ -45,7 +49,6 @@
 				Coded by <a href="#">Your Name Here</a>.
 			</p>
 		</footer>
-	</div>
 </body>
 
 </html>
