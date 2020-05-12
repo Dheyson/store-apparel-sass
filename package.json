@@ -4,10 +4,16 @@
   "description": "![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-		"sass": "sass --watch src/styles/sass:build/stylesheets",
+    "start": "node src/server/server.js",
+    "sass": "sass --watch src/styles/sass:build/stylesheets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dheyson Alves <dheyson10@gmail.com> (https://dheysonalves-tech.surge.sh/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "livereload": "^0.9.1",
+    "serve-static": "^1.14.1"
+  }
 }
