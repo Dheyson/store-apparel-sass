@@ -70,6 +70,7 @@
   }
   .container .main .information form {
     position: relative;
+    margin-top: 40px;
   }
   .container .main .information .form input {
     width: 100%;
@@ -84,6 +85,12 @@
     font-size: 18px;
     opacity: 0.6;
   }
+  .container .main .information .form .icon-error {
+    position: absolute;
+    z-index: 2;
+    right: 135px;
+    bottom: 23px;
+  }
   .container .main .information .form button {
     position: absolute;
     z-index: 1;
@@ -96,12 +103,17 @@
     cursor: pointer;
     box-shadow: 0px 2px 15px #ce9797;
   }
-  .container .main .information .form button:hover {
+  .container .main .information .form button:hover, .container .main .information .form button:active, .container .main .information .form button:focus {
     opacity: 0.5;
     box-shadow: 0px 5px 20px #ce9797;
   }
   .container .main .information .form button:disabled {
     background-image: linear-gradient(to right, #ddd, #ddd8);
+  }
+  .container .main .information .form .ui-error p {
+    color: #f96262;
+    font-size: 16px;
+    margin-left: 20px;
   }
 
   .footer {
