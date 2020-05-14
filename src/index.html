@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta name="author" content="Dheyson Alves">
+	<meta name="description" content="A simple challenge from Frontend Mentor">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 	<title>Frontend Mentor | Base Apparel coming soon page</title>
@@ -15,40 +16,41 @@
 </head>
 
 <body class="container">
-	<div class="main">
-		<div class="flex flex-column flex-evenly margin-auto">
-			<header>
+	<div class="insider">
+		<main class="information">
+			<picture class="box-1">
+				<source media="(min-width: 1440px )" srcset="./assets/images/hero-desktop.jpg">
+				<source media="(min-width: 375px)" srcset="./assets/images/hero-mobile.jpg">
+				<img src="./assets/images/hero-desktop.jpg" alt="Home portrait" />
+			</picture>
+
+			<div>
+
 				<img src="./assets/images/logo.svg" alt="Logotype page" />
-			</header>
-			<div class="information">
-
-				<h1 id="title">
-					We're
-				</h1>
-				<h2 class="sub-title">
-					coming <br />
-					soon
-				</h2>
-				<p>
-					Hello fellow shoppers! We're currently building our new fashion store.
-					Add your email below to stay up-to-date with announcements and our launch deals.
-				</p>
-
-				<form class="form" id="formk">
-					<input type="text" placeholder="Email Address" required id="email-input" />
-					<button>
-						<img src="./assets/images/icon-arrow.svg" alt="button icon">
-					</button>
-					<div class="ui-error"></div>
-				</form>
+				<div class="box-2">
+					<h1 id="title">
+						We're
+					</h1>
+					<h2 class="sub-title">
+						coming <br />
+						soon
+					</h2>
+					<p>
+						Hello fellow shoppers! We're currently building our new fashion store.
+						Add your email below to stay up-to-date with announcements and our launch deals.
+					</p>
+					<form class="form" id="formk">
+						<input type="text" placeholder="Email Address" required id="email-input" />
+						<button>
+							<img src="./assets/images/icon-arrow.svg" alt="button icon">
+						</button>
+						<div class="ui-error"></div>
+					</form>
+				</div>
 			</div>
-
-		</div>
-
-		<img src="./assets/images/hero-desktop.jpg" alt="Home portrait" srcset="./assets/images/hero-mobile.jpg 375w,
-			./assets/images/hero-desktop.jpg 1440w" sizes="(max-width: 375px) 335px, 1440px" />
-
+		</main>
 	</div>
+
 	<footer>
 		<p class="footer">
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

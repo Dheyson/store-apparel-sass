@@ -1,47 +1,26 @@
 @use 'variables';
 
 @media (max-width: variables.$breakpoint-desktop) {
-		.flex {
-			display: flex;
-		}
-		.flex-row {
-			flex-direction: row;
-		}
-		.flex-column {
-			flex-direction: column;
-		}
-		.flex-between {
-			justify-content: space-between;
-		}
-		.flex-around {
-			justify-content: space-around;
-		}
-		.flex-evenly {
-			justify-content: space-evenly;
-		}
-
-		.align-center {
-			align-items: center;
-		}
-
-		.margin-auto {
-			margin-left: 150px;
-			margin-right: 150px;
-		}
-
-		.text-center {
-			text-align: center;
-		}
 
 		.container {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 
-			.main {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+			.insider {
+
+				header {
+					width: fit-content;
+				}
+
+				.information {
+					display: flex;
+					flex-direction: row-reverse;
+
+					.box-2 {
+						margin: 150px;
+					}
+				}
 
 			.information h1 {
 				font-size: 4rem;
@@ -64,6 +43,8 @@
 				font-weight: 400;
 				line-height: 1.5em;
 				font-size: 20px;
+				word-wrap: break-word;
+
 			}
 
 			.information form {
@@ -123,6 +104,7 @@
 				margin-left: 20px;
 			}
 		}
+
 	}
 
 		.footer {
@@ -138,6 +120,37 @@
 
 }
 
-@media (min-width: variables.$breakpoint-mobile) {
+@media (max-width: variables.$breakpoint-mobile) {
+	.container {
+			display: flex;
+			flex-direction: row;
 
+				.insider {
+				display: flex;
+				flex-direction: column;
+				margin-left: 0;
+				margin-right: 0;
+
+				.information {
+					display: flex;
+					flex-direction: column;
+					align-items: inherit;
+
+					.box-2 {
+						margin: 0;
+					}
+				}
+			}
+
+	}
+
+	.footer {
+			font-size: 11px;
+			text-align: center;
+
+			a {
+			color: hsl(228, 45%, 44%);
+
+			}
+		}
 }
