@@ -9,17 +9,17 @@
 
 			.insider {
 
-				header {
-					width: fit-content;
-				}
-
 				.information {
 					display: flex;
 					flex-direction: row-reverse;
+				.data {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					margin-left: 150px;
+					margin-right: 150px;
+				}
 
-					.box-2 {
-						margin: 150px;
-					}
 				}
 
 			.information h1 {
@@ -135,6 +135,14 @@
 					display: flex;
 					flex-direction: column;
 					align-items: inherit;
+
+					:nth-child(1) {
+						order: 0;
+					}
+
+					.data {
+						margin: 0;
+					}
 
 					.box-2 {
 						margin: 0;

@@ -4,15 +4,16 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .container .insider header {
-    width: fit-content;
-  }
   .container .insider .information {
     display: flex;
     flex-direction: row-reverse;
   }
-  .container .insider .information .box-2 {
-    margin: 150px;
+  .container .insider .information .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 150px;
+    margin-right: 150px;
   }
   .container .insider .information h1 {
     font-size: 4rem;
@@ -108,6 +109,12 @@
     display: flex;
     flex-direction: column;
     align-items: inherit;
+  }
+  .container .insider .information :nth-child(1) {
+    order: 0;
+  }
+  .container .insider .information .data {
+    margin: 0;
   }
   .container .insider .information .box-2 {
     margin: 0;
