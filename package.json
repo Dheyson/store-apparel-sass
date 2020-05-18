@@ -4,8 +4,7 @@
   "description": "![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server/server.js",
-    "sass": "sass --watch src/styles/sass:build/stylesheets",
+    "sass": "sass --watch styles/sass:build/stylesheets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
