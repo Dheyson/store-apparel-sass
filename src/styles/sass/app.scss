@@ -1,9 +1,6 @@
 @use 'variables';
 
 @media (max-width: variables.$breakpoint-desktop) {
-
-
-
 		.container {
 			display: flex;
 			flex-direction: column;
