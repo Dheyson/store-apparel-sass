@@ -2,16 +2,19 @@ const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+
 
 const form = document.getElementById('formk');
 const input = document.getElementById('email-input');
+const iconError = document.getElementById('js-icon-error');
 
 function validate() {
 	let text = '';
 	if (!emailPattern.test(input.value)) {
 		text = 'Please provide a valid email';
 		input.className = 'ui-error';
+		iconError.hidden = false;
 	} else {
 		text = '';
+		iconError.hidden = true;
 	}
-	document.getElementById('test').textContent = text;
+	document.getElementById('js-paragraph-text').textContent = text;
 }
 
 function submitForm() {
