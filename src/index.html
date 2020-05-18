@@ -24,11 +24,11 @@
 				<img src="./assets/images/hero-desktop.jpg" alt="Home portrait" />
 			</picture>
 
-			<div class="data">
-				<div>
-					<img src="./assets/images/logo.svg" alt="Logotype page" />
-				</div>
+		<div>
+			<img src="./assets/images/logo.svg" alt="Logotype page" />
+		</div>
 
+			<div class="data">
 				<div class="box-2">
 					<h1 id="title">
 						We're
@@ -41,12 +41,14 @@
 						Hello fellow shoppers! We're currently building our new fashion store.
 						Add your email below to stay up-to-date with announcements and our launch deals.
 					</p>
-					<form class="form" id="formk">
-						<input type="text" placeholder="Email Address" required id="email-input" />
-						<button>
+					<form class="form" id="formk" method="POST">
+						<input type="text" placeholder="Email Address" required id="email-input" name="email"/>
+						<button id="js-btn-submit">
 							<img src="./assets/images/icon-arrow.svg" alt="button icon">
 						</button>
-						<div class="ui-error"></div>
+						<div class="ui-error">
+							<p id="test"></p>
+						</div>
 					</form>
 				</div>
 			</div>

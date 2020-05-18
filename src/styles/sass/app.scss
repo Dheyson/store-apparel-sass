@@ -2,6 +2,11 @@
 
 @media (max-width: variables.$breakpoint-desktop) {
 
+		.ui-error {
+			border-color: hsl(0, 93%, 68%);
+			border-width: 2px;
+		}
+
 		.container {
 			display: flex;
 			flex-direction: column;
@@ -19,8 +24,7 @@
 					margin-left: 150px;
 					margin-right: 150px;
 				}
-
-				}
+			}
 
 			.information h1 {
 				font-size: 4rem;
@@ -116,8 +120,6 @@
 
 			}
 		}
-
-
 }
 
 @media (max-width: variables.$breakpoint-mobile) {
@@ -134,10 +136,17 @@
 				.information {
 					display: flex;
 					flex-direction: column;
-					align-items: inherit;
 
-					:nth-child(1) {
-						order: 0;
+					&:nth-child(odd) {
+						order: 1;
+					}
+
+					&:nth-child(even) {
+						order: 2;
+					}
+
+					&:nth-child(3) {
+						order: 3;
 					}
 
 					.data {
@@ -149,7 +158,6 @@
 					}
 				}
 			}
-
 	}
 
 	.footer {
