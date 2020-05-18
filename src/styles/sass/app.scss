@@ -2,17 +2,12 @@
 
 @media (max-width: variables.$breakpoint-desktop) {
 
-		.ui-error {
-			border-color: hsl(0, 93%, 68%);
-			border-width: 2px;
-		}
+
 
 		.container {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-
-			.insider {
 
 				.information {
 					display: flex;
@@ -25,9 +20,8 @@
 					margin-left: 150px;
 					margin-right: 150px;
 				}
-			}
 
-			.information h1 {
+				h1 {
 				font-size: 4rem;
 				font-weight: 300;
 				text-transform: uppercase;
@@ -35,7 +29,8 @@
 				letter-spacing: 20px;
 				margin: 0;
 			}
-			.information h2 {
+
+			h2 {
 				color: variables.$neutral-grayish;
 				text-transform: uppercase;
 				font-weight: bold;
@@ -43,7 +38,8 @@
 				letter-spacing: 18px;
 				margin: 0;
 			}
-			.information p {
+
+			p {
 				color: variables.$desaturated-red;
 				font-weight: 400;
 				line-height: 1.5em;
@@ -52,12 +48,11 @@
 
 			}
 
-			.information form {
+			.form {
 				position: relative;
 				margin-top: 40px;
-			}
 
-			.information .form input {
+				input {
 				width: 100%;
 				padding: 20px;
 				border-color: #ddd;
@@ -70,16 +65,28 @@
 					font-size: 18px;
 					opacity: 0.6;
 				}
-			}
 
-			.information .form .icon-error {
+			&.ui-error {
+				border-color: hsl(0, 93%, 68%);
+				border-width: 2px;
+			}
+	}
+
+			.icon-error {
 				position: absolute;
 				z-index: 2;
-				right: 100px;
+				right: 140px;
 				bottom: 62px;
 			}
 
-			.information .form button {
+			.ui-error p {
+				color: variables.$soft-red;
+				font-size: 16px;
+				margin-left: 20px;
+				text-align: start;
+			}
+
+			button {
 				position: absolute;
 				z-index: 1;
 				right: 0;
@@ -102,33 +109,23 @@
 					background-image: linear-gradient(to right, #ddd, #ddd8);;
 				}
 			}
-
-			.information .form .ui-error p {
-				color: variables.$soft-red;
-				font-size: 16px;
-				margin-left: 20px;
-				text-align: start;
-			}
 		}
-
 	}
 
 		.footer {
-			font-size: 11px;
+			font-size: 16px;
 			text-align: center;
 
 			a {
-			color: hsl(228, 45%, 44%);
+			color: variables.$desaturated-red;
 
 			}
 		}
 }
+}
 
 @media (max-width: variables.$breakpoint-mobile) {
-	.container {
-			display: flex;
-			flex-direction: row;
-
+		.container {
 				.insider {
 				display: flex;
 				flex-direction: column;
@@ -138,6 +135,13 @@
 				.information {
 					display: flex;
 					flex-direction: column;
+
+				.form .icon-error {
+				position: absolute;
+				z-index: 2;
+				right: 100px;
+				bottom: 62px;
+			}
 
 					.logotype {
 						margin: 20px;
@@ -165,33 +169,25 @@
 							opacity: 0.6;
 						}
 					}
+					:nth-child(1) {
+						order: 0;
 					}
-
-
+				}
 
 					:nth-child(1) {
-						order: 1;
-					}
-
-					:nth-child(2) {
 						order: 0;
 					}
 
-					:nth-child(3) {
-						order: 2;
+					:nth-child(2) {
+						order: 1;
 					}
-
 				}
-			}
+		}
+
+		.footer {
+			font-size: 12px;
+		}
 	}
 
-	.footer {
-			font-size: 11px;
-			text-align: center;
 
-			a {
-			color: hsl(228, 45%, 44%);
-
-			}
-		}
 }

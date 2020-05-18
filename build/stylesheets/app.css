@@ -1,26 +1,21 @@
 @media (max-width: 1440px) {
-  .ui-error {
-    border-color: #f96262;
-    border-width: 2px;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .container .insider .information {
+  .container .information {
     display: flex;
     flex-direction: row-reverse;
   }
-  .container .insider .information .data {
+  .container .information .data {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 150px;
     margin-right: 150px;
   }
-  .container .insider .information h1 {
+  .container .information h1 {
     font-size: 4rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -28,7 +23,7 @@
     letter-spacing: 20px;
     margin: 0;
   }
-  .container .insider .information h2 {
+  .container .information h2 {
     color: #413a3a;
     text-transform: uppercase;
     font-weight: bold;
@@ -36,18 +31,18 @@
     letter-spacing: 18px;
     margin: 0;
   }
-  .container .insider .information p {
+  .container .information p {
     color: #ce9797;
     font-weight: 400;
     line-height: 1.5em;
     font-size: 20px;
     word-wrap: break-word;
   }
-  .container .insider .information form {
+  .container .information .form {
     position: relative;
     margin-top: 40px;
   }
-  .container .insider .information .form input {
+  .container .information .form input {
     width: 100%;
     padding: 20px;
     border-color: #ddd;
@@ -55,18 +50,28 @@
     border-radius: 40px;
     font-size: 20px;
   }
-  .container .insider .information .form input::placeholder {
+  .container .information .form input::placeholder {
     color: #ce9797;
     font-size: 18px;
     opacity: 0.6;
   }
-  .container .insider .information .form .icon-error {
+  .container .information .form input.ui-error {
+    border-color: #f96262;
+    border-width: 2px;
+  }
+  .container .information .form .icon-error {
     position: absolute;
     z-index: 2;
-    right: 100px;
+    right: 140px;
     bottom: 62px;
   }
-  .container .insider .information .form button {
+  .container .information .form .ui-error p {
+    color: #f96262;
+    font-size: 16px;
+    margin-left: 20px;
+    text-align: start;
+  }
+  .container .information .form button {
     position: absolute;
     z-index: 1;
     right: 0;
@@ -78,33 +83,22 @@
     cursor: pointer;
     box-shadow: 0px 2px 15px #ce9797;
   }
-  .container .insider .information .form button:hover, .container .insider .information .form button:active, .container .insider .information .form button:focus {
+  .container .information .form button:hover, .container .information .form button:active, .container .information .form button:focus {
     opacity: 0.5;
     box-shadow: 0px 5px 20px #ce9797;
   }
-  .container .insider .information .form button:disabled {
+  .container .information .form button:disabled {
     background-image: linear-gradient(to right, #ddd, #ddd8);
   }
-  .container .insider .information .form .ui-error p {
-    color: #f96262;
+  .container .footer {
     font-size: 16px;
-    margin-left: 20px;
-    text-align: start;
-  }
-
-  .footer {
-    font-size: 11px;
     text-align: center;
   }
-  .footer a {
-    color: #3e52a3;
+  .container .footer a {
+    color: #ce9797;
   }
 }
 @media (max-width: 375px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
   .container .insider {
     display: flex;
     flex-direction: column;
@@ -114,6 +108,12 @@
   .container .insider .information {
     display: flex;
     flex-direction: column;
+  }
+  .container .insider .information .form .icon-error {
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+    bottom: 62px;
   }
   .container .insider .information .logotype {
     margin: 20px;
@@ -137,22 +137,17 @@
     font-size: 1.1rem;
     opacity: 0.6;
   }
-  .container .insider .information :nth-child(1) {
-    order: 1;
-  }
-  .container .insider .information :nth-child(2) {
+  .container .insider .information .data :nth-child(1) {
     order: 0;
   }
-  .container .insider .information :nth-child(3) {
-    order: 2;
+  .container .insider .information :nth-child(1) {
+    order: 0;
   }
-
-  .footer {
-    font-size: 11px;
-    text-align: center;
+  .container .insider .information :nth-child(2) {
+    order: 1;
   }
-  .footer a {
-    color: #3e52a3;
+  .container .footer {
+    font-size: 12px;
   }
 }
 

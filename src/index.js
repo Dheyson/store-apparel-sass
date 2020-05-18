@@ -1,6 +1,5 @@
 const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const form = document.getElementById('formk');
 const input = document.getElementById('email-input');
 const iconError = document.getElementById('js-icon-error');
 
@@ -13,6 +12,7 @@ function validate() {
 	} else {
 		text = '';
 		iconError.hidden = true;
+		input.removeAttribute('class');
 	}
 	document.getElementById('js-paragraph-text').textContent = text;
 }
